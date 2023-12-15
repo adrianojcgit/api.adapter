@@ -33,5 +33,23 @@ namespace API.Adapter.Controllers
             }
 
         }
+
+        [HttpGet]
+        [Consumes(MediaTypeNames.Application.Json)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Get(int cod)
+        {
+            try
+            {
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+
+        }
     }
 }
