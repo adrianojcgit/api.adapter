@@ -14,7 +14,7 @@ namespace API.Adapter.Infra.Data.Repositories
         {
             _http = new HttpClient
             {
-                BaseAddress = new Uri("https://localhost:5161/")
+                BaseAddress = new Uri("http://localhost:5161/")
             };
             _http.DefaultRequestHeaders.Accept.Clear();
             _http.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
